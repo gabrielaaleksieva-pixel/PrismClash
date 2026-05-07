@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvlmlu3msesex"
-path="res://.godot/imported/PRP_01 (1).png-25de5e92d19496668f83d29de1d33add.ctex"
+uid="uid://dal4vqe33d42b"
+path="res://.godot/imported/PRP_02.png-4cba3fa1aeef4333ce7e18995932a65f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assestUI/PRP_01 (1).png"
-dest_files=["res://.godot/imported/PRP_01 (1).png-25de5e92d19496668f83d29de1d33add.ctex"]
+source_file="res://assestUI/PRP_02.png"
+dest_files=["res://.godot/imported/PRP_02.png-4cba3fa1aeef4333ce7e18995932a65f.ctex"]
 
 [params]
 

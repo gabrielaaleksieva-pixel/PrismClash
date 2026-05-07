@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://v7c1r8f1v0w5"]
+
+[ext_resource type="Texture2D" uid="uid://2gqf5uflrciy" path="res://assestUI/VS_01.jpg" id="1_36npg"]
+[ext_resource type="Script" uid="uid://dmwlc1a85o2y6" path="res://scenesUI/main_menu.gd" id="1_i2a0r"]
+[ext_resource type="Texture2D" uid="uid://b2fsg0b0s7r0r" path="res://assestUI/PRP_01 (3).png" id="2_i2a0r"]
+[ext_resource type="Texture2D" uid="uid://extbmwo5qub7" path="res://assestUI/PRP_04.png" id="3_mu05v"]
+[ext_resource type="Texture2D" uid="uid://dal4vqe33d42b" path="res://assestUI/PRP_02.png" id="4_6a41h"]
+[ext_resource type="Texture2D" uid="uid://ikbe3xwefinu" path="res://assestUI/PRP_03.png" id="5_m28ks"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhf4c"]
+texture = ExtResource("1_36npg")
+modulate_color = Color(0.7792914, 0.7792914, 0.7792913, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wg63t"]
+texture = ExtResource("2_i2a0r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36npg"]
+texture = ExtResource("2_i2a0r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsf7v"]
+texture = ExtResource("3_mu05v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hskri"]
+texture = ExtResource("4_6a41h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mu05v"]
+texture = ExtResource("4_6a41h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6a41h"]
+texture = ExtResource("4_6a41h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmqkw"]
+texture = ExtResource("5_m28ks")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m28ks"]
+texture = ExtResource("5_m28ks")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bjpyr"]
+texture = ExtResource("5_m28ks")
+
+[node name="mainMenu" type="Control" unique_id=1745876837]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2a0r")
+
+[node name="backgroundMenu" type="Panel" parent="." unique_id=153597837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rhf4c")
+
+[node name="Label" type="Label" parent="." unique_id=1298601488]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -304.0
+offset_right = 177.17383
+offset_bottom = -216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 56
+text = "Prism Clash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=389121269]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -515.0
+offset_right = 350.0
+grow_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="startButton" type="Button" parent="VBoxContainer" unique_id=1828025875]
+custom_minimum_size = Vector2(350, 125)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wg63t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_36npg")
+
+[node name="optionsButton" type="Button" parent="VBoxContainer" unique_id=1914874561]
+custom_minimum_size = Vector2(350, 125)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xsf7v")
+
+[node name="creditsButton" type="Button" parent="VBoxContainer" unique_id=1031921849]
+custom_minimum_size = Vector2(350, 125)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_hskri")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mu05v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6a41h")
+
+[node name="quitButton" type="Button" parent="VBoxContainer" unique_id=849448]
+custom_minimum_size = Vector2(350, 125)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_cmqkw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m28ks")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bjpyr")
+
+[connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/optionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]
