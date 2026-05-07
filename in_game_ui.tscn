@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ckdkgsu0rx3fs"]
+
+[ext_resource type="Texture2D" uid="uid://dfnot4k1s3cl7" path="res://assestUI/SK_01.png" id="1_kenku"]
+
+[node name="inGameUI" type="Control" unique_id=268900316]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popupMenu" type="MarginContainer" parent="." unique_id=1303887804]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu" unique_id=241492570]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="baseMenuScreen" type="MarginContainer" parent="popupMenu/VBoxContainer" unique_id=1399833213]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/VBoxContainer/baseMenuScreen" unique_id=465931605]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+texture = ExtResource("1_kenku")
+region_rect = Rect2(0, 0, 736, 368)
+
+[node name="Control" type="Control" parent="popupMenu/VBoxContainer" unique_id=990769319]
+layout_mode = 2

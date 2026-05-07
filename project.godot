@@ -10,9 +10,15 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Prism Clash"
+run/main_scene="uid://v7c1r8f1v0w5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [physics]
 
